@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infinity Gameroom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0f1a;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #0d0f1a;
+      padding: 30px 20px 15px;
+      text-align: center;
+      border-bottom: 2px solid #00ffd0;
+    }
+
+    .logo-text {
+      font-size: 32px;
+      font-weight: bold;
+      color: #00ffd0;
+      text-shadow:
+        0 0 5px #00ffd0,
+        0 0 10px #00e6e6,
+        0 0 20px #00bfbf,
+        0 0 30px #00a3a3;
+      letter-spacing: 2px;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .game {
+      background-color: #1c1f2e;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,255,200,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .game:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(0,255,255,0.6);
+    }
+
+    .game img {
+      width: 100%;
+      max-height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .game p {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .game span {
+      display: block;
+      font-size: 14px;
+      color: #0ff;
+      margin-top: 2px;
+    }
+
+    .game a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: #00ffd0;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00ffd0;
+      transition: background 0.3s;
+    }
+
+    .game a:hover {
+      background-color: #0ff;
+      color: #000;
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 24px;
+      }
+
+      .game-grid {
+        padding: 10px;
+        gap: 15px;
+      }
+
+      .game p {
+        font-size: 14px;
+      }
+
+      .game a {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-text">🎮 INFINITY GAMEROOM 🎮</div>
+  </header>
+
+  <div class="game-grid">
+
+    <div class="game">
+      <img src="https://i.ibb.co/GQS07kkd/ultra-panda.jpg" alt="Ultra Panda">
+      <p>Ultra Panda</p>
+      <span>$1 - $200</span>
+      <a href="game1.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/jv2rLgrn/pandamaster.jpg" alt="Panda Master">
+      <p>Panda Master</p>
+      <span>$1 - $200</span>
+      <a href="game2.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/M5D8Qgkr/riversweeps.jpg" alt="RiverSweeps">
+      <p>RiverSweeps</p>
+      <span>$1 - $200</span>
+      <a href="game3.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/gLdm573k/gameroom.jpg" alt="Game Room">
+      <p>Game Room</p>
+      <span>$1 - $200</span>
+      <a href="game4.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/Df9v4w5d/firekirin.jpg" alt="Fire Kirin">
+      <p>Fire Kirin</p>
+      <span>$1 - $200</span>
+      <a href="game5.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/CpL8LTS6/cashmachine-edit-60998080461004.jpg" alt="Cash Machine">
+      <p>Cash Machine</p>
+      <span>$1 - $200</span>
+      <a href="game6.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/dqVw5vq/vegas-x.jpg" alt="Vegas X">
+      <p>Vegas X</p>
+      <span>$1 - $200</span>
+      <a href="game7.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/Zpt7mmz0/vblink.jpg" alt="Vblink">
+      <p>Vblink</p>
+      <span>$1 - $200</span>
+      <a href="game8.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/W4rzHDyL/gamevault.jpg" alt="Game Vault">
+      <p>Game Vault</p>
+      <span>$1 - $200</span>
+      <a href="game9.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/xSJ1f63w/orionstar.jpg" alt="Orion Star">
+      <p>Orion Star</p>
+      <span>$1 - $200</span>
+      <a href="game10.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/Zpk985M9/milkyway.jpg" alt="Milky Way">
+      <p>Milky Way</p>
+      <span>$1 - $200</span>
+      <a href="game11.html">Buy Credits</a>
+    </div>
+
+    <div class="game">
+      <img src="https://i.ibb.co/c7h3Dzm/juwa.jpg" alt="Juwa">
+      <p>Juwa</p>
+      <span>$1 - $200</span>
+      <a href="game12.html">Buy Credits</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

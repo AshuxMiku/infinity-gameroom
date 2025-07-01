@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Infinity Gameroom</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0f1a;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #0d0f1a;
+      padding: 30px 20px 15px;
+      text-align: center;
+      border-bottom: 2px solid #00ffd0;
+    }
+
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00ffd0;
+      text-shadow:
+        0 0 5px #00ffd0,
+        0 0 10px #00e6e6,
+        0 0 20px #00bfbf;
+      letter-spacing: 2px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #1c1f2e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: #00ffd0;
+      text-shadow: 0 0 10px #00ffd0;
+      margin-bottom: 20px;
+    }
+
+    .summary, .payment {
+      margin-bottom: 30px;
+    }
+
+    .summary p, .payment p {
+      font-size: 18px;
+      margin: 12px 0;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #0ff;
+    }
+
+    .wallet {
+      font-weight: bold;
+      font-size: 20px;
+      color: #00ff90;
+      background-color: #00000044;
+      padding: 12px;
+      border-radius: 6px;
+      word-break: break-word;
+      text-align: center;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #bbbbbb;
+      margin-top: 15px;
+      background: #222;
+      padding: 10px;
+      border-left: 4px solid #00ffd0;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+
+      .logo-text {
+        font-size: 28px;
+      }
+
+      h2, h3 {
+        font-size: 20px;
+      }
+
+      .wallet {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      .summary p, .payment p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-text">🎮 INFINITY GAMEROOM 🎮</div>
+  </header>
+
+  <div class="container">
+    <h2>Checkout</h2>
+
+    <div class="summary">
+      <p><span class="label">Game:</span> <span id="gameName"></span></p>
+      <p><span class="label">Amount:</span> $<span id="creditValue"></span></p>
+    </div>
+
+    <div class="payment">
+      <h3>Pay with BCS</h3>
+      <p>Send exactly <strong>$<span id="payAmount"></span></strong> to this BCS Wallet:</p>
+      <p class="wallet">12TERcWkQxDCf4BEgxUndgZM4oW3DSw6Rq</p>
+      <p class="note">⚠️ Make sure to send the <strong>exact amount</strong>. Your order will be manually verified after payment.</p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const game = params.get("game");
+    const credits = params.get("credits");
+
+    document.getElementById("gameName").innerText = game;
+    document.getElementById("creditValue").innerText = credits;
+    document.getElementById("payAmount").innerText = credits;
+  </script>
+
+</body>
+</html>

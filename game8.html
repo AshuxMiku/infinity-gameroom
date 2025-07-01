@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vblink - Select Credits</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0f1a;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #0d0f1a;
+      padding: 30px 20px 15px;
+      text-align: center;
+      border-bottom: 2px solid #00ffd0;
+    }
+
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00ffd0;
+      text-shadow:
+        0 0 5px #00ffd0,
+        0 0 10px #00e6e6,
+        0 0 20px #00bfbf;
+      letter-spacing: 2px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #1c1f2e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00ffd0;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffd0;
+      font-size: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    select {
+      background-color: #0d0f1a;
+      color: #00ffd0;
+      box-shadow: 0 0 10px #00ffd0;
+    }
+
+    button {
+      background-color: #00ffd0;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ffd0;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0ff;
+      color: #000;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+
+      .logo-text {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-text">🎮 INFINITY GAMEROOM 🎮</div>
+  </header>
+
+  <div class="container">
+    <h2>Vblink - Buy Credits</h2>
+    <form action="checkout.html" method="get">
+      <input type="hidden" name="game" value="Vblink">
+      <label for="credits">Select Amount ($1 - $200):</label>
+      <select name="credits" id="credits"></select>
+      <button type="submit">Continue to Checkout</button>
+    </form>
+  </div>
+
+  <script>
+    const select = document.getElementById('credits');
+    for (let i = 1; i <= 200; i++) {
+      const option = document.createElement('option');
+      option.value = i;
+      option.text = `$${i}`;
+      select.appendChild(option);
+    }
+  </script>
+
+</body>
+</html>
